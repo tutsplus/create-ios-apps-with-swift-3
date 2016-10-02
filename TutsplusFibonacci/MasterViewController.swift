@@ -13,14 +13,16 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
 
+    let tableViewDataSource = FibonacciDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        self.tableView.dataSource = tableViewDataSource
         
-        objects.append("1")
-        objects.append("1")
+        tableViewDataSource.addNewNumber(tableView: tableView)
+        tableViewDataSource.addNewNumber(tableView: tableView)
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
@@ -41,9 +43,7 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(_ sender: Any) {
-        objects.insert("2", at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        self.tableView.insertRows(at: [indexPath], with: .automatic)
+        tableViewDataSource.addNewNumber(tableView: tableView)
     }
 
     // MARK: - Segues
@@ -91,7 +91,5 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
 }
 

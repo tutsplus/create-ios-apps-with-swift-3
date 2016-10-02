@@ -13,6 +13,8 @@
 		9065C9611DA148D600EAD5C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9065C95F1DA148D600EAD5C6 /* Main.storyboard */; };
 		9065C9631DA148D600EAD5C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9065C9621DA148D600EAD5C6 /* Assets.xcassets */; };
 		9065C9661DA148D600EAD5C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9065C9641DA148D600EAD5C6 /* LaunchScreen.storyboard */; };
+		9065C96E1DA1509600EAD5C6 /* FibonacciNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065C96D1DA1509600EAD5C6 /* FibonacciNumber.swift */; };
+		9065C9701DA1548000EAD5C6 /* FibonacciDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065C96F1DA1548000EAD5C6 /* FibonacciDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9065C9621DA148D600EAD5C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9065C9651DA148D600EAD5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9065C9671DA148D600EAD5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9065C96D1DA1509600EAD5C6 /* FibonacciNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciNumber.swift; sourceTree = "<group>"; };
+		9065C96F1DA1548000EAD5C6 /* FibonacciDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				9065C9621DA148D600EAD5C6 /* Assets.xcassets */,
 				9065C9641DA148D600EAD5C6 /* LaunchScreen.storyboard */,
 				9065C9671DA148D600EAD5C6 /* Info.plist */,
+				9065C96D1DA1509600EAD5C6 /* FibonacciNumber.swift */,
+				9065C96F1DA1548000EAD5C6 /* FibonacciDataSource.swift */,
 			);
 			path = TutsplusFibonacci;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 				9065C95E1DA148D600EAD5C6 /* DetailViewController.swift in Sources */,
 				9065C95C1DA148D600EAD5C6 /* MasterViewController.swift in Sources */,
 				9065C95A1DA148D600EAD5C6 /* AppDelegate.swift in Sources */,
+				9065C96E1DA1509600EAD5C6 /* FibonacciNumber.swift in Sources */,
+				9065C9701DA1548000EAD5C6 /* FibonacciDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
