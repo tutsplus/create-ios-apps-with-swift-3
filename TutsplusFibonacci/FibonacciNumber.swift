@@ -54,7 +54,7 @@ extension FibonacciNumber {
         var returnArray = [Int]()
         
         while let previous = previousNumber, previous.value > 0 {
-            returnArray.append(previousValue())
+            returnArray.append(previous.value)
             previousNumber = previous.previousNumber
         }
         
