@@ -20,8 +20,9 @@ class MasterViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.tableView.dataSource = tableViewDataSource
         
-        tableViewDataSource.addNewNumber(tableView: tableView)
-        tableViewDataSource.addNewNumber(tableView: tableView)
+        for _ in 1...50 {
+            tableViewDataSource.addNewNumber(tableView: tableView)
+        }
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton

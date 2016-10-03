@@ -9,8 +9,8 @@
 import Foundation
 
 class FibonacciNumber {
-    private let previousIndexA : FibonacciNumber?
-    private let previousIndexB : FibonacciNumber?
+    fileprivate let previousIndexA : FibonacciNumber?
+    fileprivate let previousIndexB : FibonacciNumber?
     
     var previousNumber : FibonacciNumber? {
         get {
@@ -59,6 +59,35 @@ extension FibonacciNumber {
         }
         
         return returnArray
+    }
+    
+    func asyncValue(completion: @escaping (Int) -> ()) {
+        DispatchQueue.global().async {
+            var A = 0, B = 1
+            
+            let queue = DispatchQueue(label: "Calculator", qos: .background, attributes: .concurrent)
+            let group = DispatchGroup()
+            
+            if let previousIndexA = self.previousIndexA {
+                group.enter()
+                queue.async {
+                    A = previousIndexA.value
+                    group.leave()
+                }
+            }
+            
+            if let previousIndexB = self.previousIndexB {
+                group.enter()
+                queue.async {
+                    B = previousIndexB.value
+                    group.leave()
+                }
+            }
+            
+            group.wait()
+            
+            completion(A + B)
+        }
     }
 }
 

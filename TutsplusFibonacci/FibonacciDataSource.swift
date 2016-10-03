@@ -27,9 +27,15 @@ class FibonacciDataSource : NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel!.text = "Calculating..."
         
-        let object = objects[indexPath.row]
-        cell.textLabel!.text = "\(object.value)"
+        let object = self.objects[indexPath.row]
+        object.asyncValue { (value) in
+            DispatchQueue.main.async {
+                cell.textLabel!.text = String(value)
+            }
+        }
+        
         return cell
     }
 }
