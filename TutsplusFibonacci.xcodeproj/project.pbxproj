@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903B5AC31DA244D100F7D6CF /* TutsplusFibonacci-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TutsplusFibonacci-Bridging-Header.h"; sourceTree = "<group>"; };
 		9065C9561DA148D600EAD5C6 /* TutsplusFibonacci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutsplusFibonacci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9065C9591DA148D600EAD5C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9065C95B1DA148D600EAD5C6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 				9065C9671DA148D600EAD5C6 /* Info.plist */,
 				9065C96D1DA1509600EAD5C6 /* FibonacciNumber.swift */,
 				9065C96F1DA1548000EAD5C6 /* FibonacciDataSource.swift */,
+				903B5AC31DA244D100F7D6CF /* TutsplusFibonacci-Bridging-Header.h */,
 			);
 			path = TutsplusFibonacci;
 			sourceTree = "<group>";
@@ -274,6 +276,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmuehlberger.TutsplusFibonacci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TutsplusFibonacci/TutsplusFibonacci-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -286,6 +289,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmuehlberger.TutsplusFibonacci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TutsplusFibonacci/TutsplusFibonacci-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -309,6 +313,7 @@
 				9065C96C1DA148D600EAD5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
